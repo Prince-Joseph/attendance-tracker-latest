@@ -1,0 +1,207 @@
+.top-bar-container{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  top:0;
+  position: sticky;
+  background-color: rgba(161, 182, 255,1);;
+  z-index: 5;
+}
+.top-bar-left{
+  font-weight: bold;
+  text-align: center;
+  padding: none;
+  margin: 0;
+  flex-grow: 4;
+}
+.arrow-button{
+  border:none;
+  border-radius: 5px;
+  margin:2%;
+}
+.K_btn{
+  border: none;
+  padding: 4px 15px;
+  border-radius: 5px;
+}
+.top-bar-right{
+  font-weight: bold;
+  text-align: center;
+  padding: none;
+  margin: 0;
+  flex-grow: 4;
+  flex-direction: column;
+}
+.section_name{
+  margin-top: 6px;
+  margin-left:50%;
+  border-radius: 6px; 
+  border: none;
+  margin:2%; 
+}
+
+.PA-buttons-lastlayer{
+  background-color: #9BF0D1;
+  border-radius: 10px;
+  padding:  5px 5px;
+  margin-right:10%;
+  margin:3%; 
+}
+
+.A-buttons-lastlayer{
+  background-color: rgb(231, 145, 145);
+  border-radius: 10px;
+  padding:  5px 5px;
+  margin-right:10%;
+  margin:3%; 
+}
+.PA-buttons-whitelayer{
+  background-color:white;
+  border-radius: 10px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Present_button{
+  background-color: white;
+  color:grey ;
+  border-radius: 10px;
+  border: none;
+  min-height: 35px;
+  min-width: 50%;
+  margin-Left: 0%;
+  font-size: 2rem;
+  padding-top: 4px;
+
+}
+.bg_change_green{
+  background-color: #09B778;
+  color: white;  
+}
+.Absent_button{
+  background-color:  white; 
+  color: grey;
+  border-radius: 10px;
+  border: none;
+  min-height: 35px;
+  min-width: 50%;
+  font-size: 2rem;
+  padding-top: 4px;
+}
+
+.bg_change_red{
+  color:white;
+  background-color:#d20202; 
+}
+
+.p-count{
+  margin-top: 1rem;
+  margin-left:2rem;
+  margin-right: 2rem;
+  color: green;
+  background-color: white;
+  border: none;
+} 
+
+.a-count{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: red;
+  background-color: white;
+  border:none;
+  text-align: center;
+}
+.top-bar-classstrength{
+  display: flex;
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 15px;
+  margin-left: 40%; 
+  border-radius: 3px;
+  margin-right:40%;
+  margin-bottom: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .top-present{
+  background-color: rgb(124, 187, 124);
+  border:none;
+  
+  /* border-radius:10px; */
+  
+/* }
+.top-absent{
+background-color: rgb(238, 113, 113);
+border:none; */
+/* border-radius:10px; */
+
+
+ 
+/* .K_btn{
+  border: none;
+  padding: 4px 15px;
+  border-radius: 5px;
+} */
+ /* .PA-button{
+  border: none;
+  border-radius: 5px;
+  /* max-width: 12rem; */
+  /* padding: 5px 20px;
+  background-color: rgba(155, 240, 209, 1);
+  
+ } */ 
+
+
+/* .PA-P{
+  border: none;
+  border-radius: 5px;
+  margin-right:3rem ;
+  padding-right:3rem;
+  
+  text-align: center;
+  margin-left:1rem ;  
+} */
+
+/* .aCount{
+  display: flex;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+   margin-left: 50%; 
+   border-radius: 7px;
+
+} */
+/* .p-count{
+  color: black;
+  border: none;
+  font-weight: bold;
+  margin-right: 10px;
+} */
+/* .section_name{
+   margin-top: 6px;
+    margin-left:50%;
+    border-radius: 6px; 
+    border: none; 
+} */
+/* present button green code */
+

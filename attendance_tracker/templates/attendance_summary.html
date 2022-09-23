@@ -1,0 +1,32 @@
+<!--
+    Description:
+    Shows the summary of attendance of
+    a specific period and classrom
+    
+    path: attendance/summary/<int:classroom_id>/<int:period_id>/'
+    urls: http://localhost:8000/attendance/summary/1/1/
+    views:attendance_summary
+-->
+
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Only present guys</h1>
+{% for x in attendance_summary%}
+    {% if x.is_present %}
+        {{x.student.roll_number}}
+    {% endif %}
+{% endfor%}
+<br><br>
+<hr>
+<h1>Only Absent guys</h1>
+{% for x in attendance_summary%}
+    {% if not x.is_present %}
+        {{x.student.roll_number}}
+    {% endif %}
+{% endfor%}
+{% endblock content %}
+
+

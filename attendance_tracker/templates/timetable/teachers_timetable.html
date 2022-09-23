@@ -1,0 +1,40 @@
+<!--
+    Description:
+    Shows the timetable for the teacher
+
+    path:timetable/t/<int:teacher_id>/
+    url: http://localhost:8000/timetable/t/1/
+    views:teachers_timetable
+-->
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% for x in tables %}
+
+
+{% if x.classroom == "period" %}
+<br><br>
+{% else%}
+
+{{x.classroom}} for {{x.week_day}} <br>
+{% endif %}
+
+{% endfor %}
+
+<h1>
+    mondays timetable
+</h1>
+
+{% for timetable in monday %}
+    <p>{{ timetable.classroom }} |
+        {{ timetable.period_1.subject.name }}
+    </p>
+{% endfor %}
+
+
+
+{% endblock content %}

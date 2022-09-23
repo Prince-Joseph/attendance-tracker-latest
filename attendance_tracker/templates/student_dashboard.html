@@ -1,0 +1,115 @@
+<!--
+    Description:
+    Shows Student Dashboard
+
+    path: student_dashboard/<int:student_id>/
+    url: http://localhost:8000/dashboard/s/1/
+    view: student_dashboard
+-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="header">
+  {{ student.roll_number }}
+</div>
+
+<!-- Timetable and Attendance Hybrid to show current period of the day -->
+<!-- current present/state -->
+
+{% comment %}
+
+  {% for attendance_record in todays_attendance %}
+    {{attendance_record.student.roll_number}} |
+    {{attendance_record.period}} |
+    {{attendance_record.subject.name}} |
+    {{attendance_record.is_present}} <br>
+  {% endfor %}
+  todays_attendance
+
+{% endcomment %}
+<div class="timetable box-holder">
+
+  <div class="box"> {{ timetable.period_1.subject.name }} </div>
+
+  <div class="box absent"> {{ timetable.period_2.subject.name }} </div>
+
+  <div class="box present"> {{ timetable.period_3.subject.name }}  </div>
+
+  <div class="box present">  {{ timetable.period_4.subject.name }}  </div>
+
+  <div class="box">  {{ timetable.period_5.subject.name }} </div>
+
+  <div class="box"> {{ timetable.period_6.subject.name }}  </div>
+
+  <div class="box"> {{ timetable.period_7.subject.name }}  </div>
+
+</div>
+
+
+<div class="at_stats">
+  <h1 class="count">Absent :<span class="absent-count">33</h1>
+  <h1 class="count">Present :<span class="present-count"> 55/100</h1>
+</div>
+
+<div>
+    <!-- <a href="/timetable/c/1" > link to classroom </a> -->
+
+
+  </div>
+
+  <div class="box-holder">
+   <a href="/attendance/s/61/d/2022/09/19/" class="btn">Today</a>
+   <a href="{% url 'classroom_timetable' student.classroom.id   %}" class="btn" >{{ student.classroom }} Timetable</a>
+   
+
+   <a href="{% url 'specific_date_attendance' student.id 2022 09 12%}" class="btn"> Specific Date </a>
+
+   <a href="{% url 'subjectwise_attendance' student.id 1 %}" class="btn" >Per Subject</a>
+   
+
+   <a  href="{%url 'semester_attendance'  student.id  %}" class="btn">Per Semester</a>
+  
+
+  </div>
+
+  <div class="row">
+    
+    <div class="col">
+      <div href="{% url 'subjectwise_attendance' student.id 1 %}" class="subjectbar" ><span style="width:55%" class="">iot 12/33</span></div>
+      <div href="{% url 'subjectwise_attendance' student.id 2 %}" class="subjectbar" ><span style="width:55%" class="low">pps 12/33</span></div>
+      <div href="{% url 'subjectwise_attendance' student.id 3 %}" class="subjectbar" ><span style="width:55%" class="">dat 78/23</span></div>
+      <div href="{% url 'subjectwise_attendance' student.id 4 %}" class="subjectbar" ><span style="width:55%" class="">dbm 65/12</span></div>
+    </div>
+    
+    <div class="col">
+      <div href="{% url 'subjectwise_attendance' student.id 5 %}" class="subjectbar" ><span style="width:55%">ada    45/55</span></div>
+      <div href="{% url 'subjectwise_attendance' student.id 6 %}" class="subjectbar" ><span style="width:55%">mad lab     23/45</span></div>
+      <div href="{% url 'subjectwise_attendance' student.id 7 %}" class="subjectbar" ><span style="width:55%">iot lab    78/89</span></div>
+      <div href="{% url 'subjectwise_attendance' student.id 8 %}" class="subjectbar" ><span style="width:55%">pcc lab    89/90</span></div>
+    </div>
+      
+    
+
+  </div>
+
+{% endblock content %}
+
+<!--
+{% comment %}
+
+
+{% for x in student_dashboard %}
+{% if x.student.is_present %}
+  <h1 class="Present_button">Present</h1>
+        {{x.student.roll_number}}
+<br>
+<hr>
+
+{% else %}
+  <h1 class="Absent_button">Absent</h1>
+        {{x.student.roll_number}}
+  {% endif %}
+{% endfor%}
+{% endcomment %} -->

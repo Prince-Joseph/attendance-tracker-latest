@@ -1,0 +1,33 @@
+<!--
+  Description:
+  Specific Date attendace for student.
+
+  path: attendance/s/<int:student_id>/d/<int:year>/<int:month>/<int:date>/
+  urls: http://localhost:8000/attendance/s/1/d/2022/9/18/
+  view: specific_day_attendance
+-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header">
+  {{ request.user.username }}
+</div>
+<div class="">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Period</div>
+      <div class="col col-2">Subject</div>
+      <div class="col col-3">P/A status</div>
+    </li>
+  {% for attendance_record in specific_date_attendance %}
+  <li class="table-row {% if attendance_record.is_present %}present{% else%}absent{% endif%} ">
+    <div class="col col-1" data-label="period_name">{{attendance_record.period}}</div>
+    <div class="col col-2" data-label="subject_name">{{attendance_record.subject.name}}</div>
+    <div class="col col-3" data-label="status">{% if attendance_record.is_present %}Present{% else%}Absent{% endif%}</div>
+  </li>
+
+{% endfor %}
+</ul>
+</div>
+{% endblock content %}

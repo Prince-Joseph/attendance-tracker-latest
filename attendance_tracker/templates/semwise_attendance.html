@@ -1,0 +1,26 @@
+<!--
+    Description:
+    Show Attendance history of the Student
+    for complete Semester
+
+    view: semesterwise_attendance
+    path: attendance/s/<int:student_id>/semester/
+    url:  http://localhost:8000/attendance/s/1/semester/
+-->
+
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container">
+{%for attendance_record in semesterwise_attendance%}
+{{attendance_record.student.roll_number}}
+{{attendance_record.is_present}}
+{{attendance_record.date}}
+<br>
+{%endfor%}
+average semester  percentage
+
+
+</div>
+{% endblock content %}

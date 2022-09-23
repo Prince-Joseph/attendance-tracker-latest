@@ -1,0 +1,248 @@
+/*  */
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0 0 0 0;
+    font-family: sans-serif;
+}
+
+.topFragment {
+    display: flex;
+    align-items: center;
+    height: 5em;
+    background: #A1B6FF;
+    color: white;
+    padding: 20px;
+}
+
+.summaryHeader {
+    margin-top: -5rem; 
+    margin-left: 0;
+    /* padding: 70px 30px 30px 70px; */
+    padding: 5%;
+    text-align: center;
+}
+
+ .summaryHeader h1{
+    font-size: 4rem;
+    font-weight: 100 ;
+    /* color: black; */
+ }
+.saveMessage {
+    color: green;
+    text-align: center;
+
+}
+
+
+
+.headerList {
+
+    /* font-size: 150%; */
+    font-size: 2.5rem;
+    display: inline-block;
+    /* font-family: serif; */
+    font-weight: bold;
+    display: block;
+    padding-left:15px; 
+}
+
+
+
+.editButton {
+    inset-inline: right;
+
+}
+
+
+.btn {
+    /* Your choice of nice color for btn text and col */
+    background-color: #BDC8FF;
+    /* this too*/
+    color: #000000;
+    /* this too*/
+    padding: 5px 10px;
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 10px 30px;
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 5px;
+    border:none;
+}
+
+.back {
+    background-color: #FDFEFF;
+    color: #000000;
+    padding: 5px 10px;
+    width: 15%;
+    height: 2.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 30px;
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 8px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    border: 7;
+
+
+}
+
+.done {
+    background-color: #09B778;
+    color: white;
+    padding: 5px 10px;
+    width: 40%;
+    display: inline-block;
+    height: 30px;
+    font-size: 1.5rem;
+    margin: 10%;
+    width: 40%;
+    margin-top: 1px;
+    margin-left: 30%;
+    margin-right: 30%;
+    position: middle;
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*
+.centerit {
+    margin-top: -85px;
+} */
+
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    margin-top: -10px;
+
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+.flex-item:nth-of-type(1) {
+    flex-grow: 4;
+}
+
+.flex-item:nth-of-type(2) {
+    flex-grow: 1;
+}
+
+.flex-item:nth-of-type(3) {
+    flex-grow: 4;
+}
+
+.flex-item {
+
+    /* background: tomato; */
+    /* border: 3px solid rgba(0, 0, 0, .2); */
+    line-height: 100px;
+    font-weight: bold;
+    /* font-size: 2em; */
+    text-align: center;
+    padding: none;
+    margin: 0;
+}
+
+
+.section-grp{
+    background-color: #E8F1FF;
+    color: #000000;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 0;
+}
+
+.section-grp h1{
+    font-size: 22px;
+    font-weight:900;
+}
+.section-grp p{
+    font-size: 1rem;
+    font-weight:bold;
+}
+/* #00693E; #152220; */
+
+
+.topContainer{
+    display: flex;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+     margin-left: 50%; 
+     border-radius: 7px;
+    
+
+}
+
+.pcount{
+    color: black;
+    border: none;
+    font-weight: bold;
+    margin-right: 10px;
+    
+  } 
+
+
+  .acount{    
+    color: #FF0707;
+    border:none;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 2px;
+    
+  }
+
+/*
+.PA-button{
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  background-color: rgba(155, 240, 209, 1);
+  
+ }
+ 
+ 
+   margin-top: 1rem;
+    margin-left:2rem;
+    */
+

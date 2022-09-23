@@ -1,0 +1,85 @@
+<mxfile host="65bd71144e">
+    <diagram id="gMiqQtXoZ0BTMiNfOUTg" name="gitflow">
+        <mxGraphModel dx="1153" dy="647" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="29" value="Student Views" style="swimlane;fillColor=none;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="340" height="850" as="geometry">
+                        <mxRectangle x="40" y="40" width="140" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Student Dashboard&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt; urls:&lt;b&gt; student/u/&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;views: student_dashboard&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;models: Student, &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Shows the dashboard where student can see his current semester percentage.&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;views_logic:&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;1. Verify request.user is a student&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;2. if yes, search in attendance model get required stats&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;templates: &lt;/b&gt;check figma&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Redirects to &lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Student Attendance History&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Students Analytics&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Students classroom timetable&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;glass=0;shadow=0;sketch=0;spacingLeft=2;spacingRight=2;align=left;" parent="29" vertex="1">
+                    <mxGeometry x="20" y="40" width="310" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Student Attendance Analytics&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt; urls:&lt;b&gt; student/u/&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;views: student_dashboard&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;models: Student, Attendance&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Shows the dashboard where student can see his current semester percentage.&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;views_logic:&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;1. Verify request.user is a student&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;2. if yes, search in attendance model get required data using filters query parameters &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;(?wise=subject&amp;amp;period=week).&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;(?wise=all&amp;amp;period=day)&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;templates: &lt;/b&gt;check figma&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;use javascript to do add params&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Redirects to &lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Student Dashbooard &lt;/b&gt;Back button&lt;br&gt;&lt;/div&gt;&lt;b&gt;Students Analytics&lt;/b&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;align=left;spacingLeft=2;spacingRight=2;" parent="29" vertex="1">
+                    <mxGeometry x="20" y="330" width="310" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Student Attendance History&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt; urls:&lt;b&gt; student/u/&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;views: student_dashboard&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;models: Student, Attendance&lt;br&gt;&lt;/div&gt;&lt;b&gt;&lt;/b&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;align=left;spacingLeft=2;spacingRight=2;" parent="29" vertex="1">
+                    <mxGeometry x="20" y="710" width="310" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Attendance Models" style="swimlane;rounded=0;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;fillColor=none;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="60" width="360" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;div&gt;&lt;pre&gt;&lt;b&gt;get_attendance_student_wise(student,&lt;br&gt;range,subject):&lt;/b&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;1. filter attendance model with student&lt;/p&gt;&lt;p&gt;2. filter attendance model with subject if it exists with if condition&lt;/p&gt;&lt;p&gt;3. filter latest date range???&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;or create by dates&lt;br&gt;&lt;/p&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fillColor=none;strokeColor=#82b366;" parent="33" vertex="1">
+                    <mxGeometry x="25" y="50" width="310" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="get_total_attendance_percentage" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;fillColor=none;strokeColor=#82b366;" parent="33" vertex="1">
+                    <mxGeometry x="25" y="280" width="305" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="get_current_month_attendance_percentage" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;fillColor=none;strokeColor=#82b366;" parent="33" vertex="1">
+                    <mxGeometry x="25" y="360" width="305" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=11;" parent="1" source="31" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="555"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=11;" parent="1" source="30" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=11;" parent="1" source="30" target="36" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="TimeTable" style="swimlane;rounded=0;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;fillColor=none;strokeColor=#d6b656;gradientColor=none;swimlaneFillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="583" width="200" height="296" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="&lt;div&gt;classroom view&lt;/div&gt;&lt;div&gt;urls: timetable/c/&amp;lt;str:classroom&amp;gt;&lt;/div&gt;&lt;div&gt;models: filters with classroom&lt;/div&gt;&lt;div&gt;untill 6&lt;/div&gt;&lt;div&gt;use url splitter which kiran&amp;nbsp; and nams designed independently in python and javscript respectively&lt;br&gt;&lt;/div&gt;&lt;div&gt;templates simple loop&lt;/div&gt;&lt;div&gt;@public anyone can see&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;gradientColor=none;" parent="40" vertex="1">
+                    <mxGeometry x="12" y="41" width="176" height="132" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;div&gt;teachers view&lt;/div&gt;&lt;div&gt;urls: timetable/t/&amp;lt;teacher_id&amp;gt;&lt;/div&gt;&lt;div&gt;models: filters with teachers&lt;br&gt;&lt;/div&gt;&lt;div&gt;untill 6&lt;/div&gt;&lt;div&gt;templates simple loop&lt;/div&gt;&lt;div&gt;@public anyone can see&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;gradientColor=none;" parent="40" vertex="1">
+                    <mxGeometry x="10" y="185" width="176" height="83" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Teachers" style="swimlane;rounded=0;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;fillColor=none;strokeColor=#d6b656;gradientColor=none;swimlaneFillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="967" width="261" height="636" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Teacher Dashboard view&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt; urls:&lt;b&gt; teacher/u/&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;views: teacher_dashboard&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;models: Student, &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Shows the dashboard &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Shows the next class &lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;views_logic:&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;templates: &lt;/b&gt;check figma&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Redirects to &lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Attendance Input&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Teachers Timetable&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Teachers History of Attendance input&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;gradientColor=none;align=left;" parent="43" vertex="1">
+                    <mxGeometry x="20" y="45" width="212" height="247" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Teacher's History of attendance input&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;shows all the inputs done by teacher&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;how to do it? &lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;in attendance model filter all the inputs by specific teacher.&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;get combined unique dates, periods and class room rows&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;add those individual rows to array&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;display the array &lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;every input is a summary page. i&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;use the code in acrez bidding which prince wrote.&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;i just realized we can create a table and FK it to the attendance. ?? is it needed&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;b&gt;Basically history of summary pages&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;gradientColor=none;align=left;" parent="43" vertex="1">
+                    <mxGeometry x="20" y="356" width="212" height="247" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Attendance" style="swimlane;rounded=0;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;fillColor=none;strokeColor=#82b366;swimlaneFillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="766" y="910" width="324" height="603" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;div&gt;Attendance React Page&lt;/div&gt;&lt;div&gt;Shows the react page for input&lt;/div&gt;&lt;div&gt;Gets the data from url&lt;/div&gt;&lt;div&gt;addAttendance/&amp;lt;mech3a&amp;gt;/period/&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;gradientColor=none;align=left;" parent="46" vertex="1">
+                    <mxGeometry x="20" y="90" width="212" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;div&gt;Attendance Serializer Class data&lt;br&gt;&lt;/div&gt;&lt;div&gt;Shows the react page for input&lt;/div&gt;&lt;div&gt;Gets data from classroom database and gives to react page&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;gradientColor=none;align=left;" parent="46" vertex="1">
+                    <mxGeometry x="20" y="169" width="212" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Attendance Input receiver under post." style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;gradientColor=none;align=left;" parent="46" vertex="1">
+                    <mxGeometry x="20" y="246" width="212" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Attendance summary page" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;glass=0;sketch=0;fontFamily=Helvetica;fontSize=11;gradientColor=none;align=left;" parent="46" vertex="1">
+                    <mxGeometry x="20" y="301" width="212" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.649;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=11;" parent="1" source="45" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

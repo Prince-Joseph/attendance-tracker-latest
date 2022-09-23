@@ -1,0 +1,225 @@
+/* Paste the stuff in the box of attendance/save url and click post :) */
+
+{
+    "classroom_id": 1,
+    "period_id": 1,
+    "subject_id": 1,
+    "student_data": [
+        {"rollNumber": "19K81A0008", "isPresent": false
+        },
+        {"rollNumber": "19K81A0008", "isPresent": false
+        },
+        {"rollNumber": "19K81A0008", "isPresent": false
+        },
+        {"rollNumber": "19K81A0008", "isPresent": false
+        },
+        {"rollNumber": "19K81A0001", "isPresent": true
+        },
+        {"rollNumber": "19K81A0002", "isPresent": true
+        },
+        {"rollNumber": "19K81A0003", "isPresent": true
+        },
+        {"rollNumber": "19K81A0004", "isPresent": true
+        },
+        {"rollNumber": "19K81A0005", "isPresent": true
+        },
+        {"rollNumber": "19K81A0006", "isPresent": true
+        },
+        {"rollNumber": "19K81A0007", "isPresent": true
+        },
+        {"rollNumber": "19K81A0008", "isPresent": true
+        },
+        {"rollNumber": "19K81A0009", "isPresent": true
+        },
+        {"rollNumber": "19K81A0010", "isPresent": true
+        },
+        {"rollNumber": "19K81A0011", "isPresent": true
+        },
+        {"rollNumber": "19K81A0012", "isPresent": true
+        },
+        {"rollNumber": "19K81A0013", "isPresent": true
+        },
+        {"rollNumber": "19K81A0014", "isPresent": true
+        },
+        {"rollNumber": "19K81A0015", "isPresent": true
+        },
+        {"rollNumber": "19K81A0016", "isPresent": true
+        },
+        {"rollNumber": "19K81A0017", "isPresent": true
+        },
+        {"rollNumber": "19K81A0018", "isPresent": true
+        },
+        {"rollNumber": "19K81A0019", "isPresent": true
+        },
+        {"rollNumber": "19K81A0020", "isPresent": true
+        },
+        {"rollNumber": "19K81A0021", "isPresent": true
+        },
+        {"rollNumber": "19K81A0022", "isPresent": true
+        },
+        {"rollNumber": "19K81A0023", "isPresent": true
+        },
+        {"rollNumber": "19K81A0024", "isPresent": true
+        },
+        {"rollNumber": "19K81A0025", "isPresent": true
+        },
+        {"rollNumber": "19K81A0026", "isPresent": true
+        },
+        {"rollNumber": "19K81A0027", "isPresent": true
+        },
+        {"rollNumber": "19K81A0028", "isPresent": true
+        },
+        {"rollNumber": "19K81A0029", "isPresent": true
+        },
+        {"rollNumber": "19K81A0030", "isPresent": true
+        },
+        {"rollNumber": "19K81A0031", "isPresent": true
+        },
+        {"rollNumber": "19K81A0032", "isPresent": true
+        },
+        {"rollNumber": "19K81A0033", "isPresent": true
+        },
+        {"rollNumber": "19K81A0034", "isPresent": true
+        },
+        {"rollNumber": "19K81A0035", "isPresent": true
+        },
+        {"rollNumber": "19K81A0036", "isPresent": true
+        },
+        {"rollNumber": "19K81A0037", "isPresent": true
+        },
+        {"rollNumber": "19K81A0038", "isPresent": true
+        },
+        {"rollNumber": "19K81A0039", "isPresent": true
+        },
+        {"rollNumber": "19K81A0040", "isPresent": true
+        },
+        {"rollNumber": "19K81A0041", "isPresent": true
+        },
+        {"rollNumber": "19K81A0042", "isPresent": true
+        },
+        {"rollNumber": "19K81A0043", "isPresent": true
+        },
+        {"rollNumber": "19K81A0044", "isPresent": true
+        },
+        {"rollNumber": "19K81A0045", "isPresent": true
+        },
+        {"rollNumber": "19K81A0046", "isPresent": true
+        },
+        {"rollNumber": "19K81A0047", "isPresent": true
+        },
+        {"rollNumber": "19K81A0048", "isPresent": true
+        },
+        {"rollNumber": "19K81A0049", "isPresent": true
+        },
+        {"rollNumber": "19K81A0050", "isPresent": true
+        },
+        {"rollNumber": "19K81A0051", "isPresent": true
+        },
+        {"rollNumber": "19K81A0052", "isPresent": true
+        },
+        {"rollNumber": "19K81A0053", "isPresent": true
+        },
+        {"rollNumber": "19K81A0054", "isPresent": true
+        },
+        {"rollNumber": "19K81A0055", "isPresent": true
+        },
+        {"rollNumber": "19K81A0056", "isPresent": true
+        },
+        {"rollNumber": "19K81A0057", "isPresent": true
+        },
+        {"rollNumber": "19K81A0058", "isPresent": true
+        },
+        {"rollNumber": "19K81A0059", "isPresent": true
+        },
+        {"rollNumber": "19K81A0060", "isPresent": true
+        },
+        {"rollNumber": "19K81A0061", "isPresent": true
+        },
+        {"rollNumber": "19K81A0062", "isPresent": true
+        },
+        {"rollNumber": "19K81A0063", "isPresent": true
+        },
+        {"rollNumber": "19K81A0064", "isPresent": true
+        },
+        {"rollNumber": "19K81A0065", "isPresent": true
+        },
+        {"rollNumber": "19K81A0066", "isPresent": true
+        },
+        {"rollNumber": "19K81A0067", "isPresent": true
+        },
+        {"rollNumber": "19K81A0068", "isPresent": true
+        },
+        {"rollNumber": "19K81A0069", "isPresent": true
+        },
+        {"rollNumber": "19K81A0070", "isPresent": true
+        },
+        {"rollNumber": "19K81A0071", "isPresent": true
+        },
+        {"rollNumber": "19K81A0072", "isPresent": true
+        },
+        {"rollNumber": "19K81A0073", "isPresent": true
+        },
+        {"rollNumber": "19K81A0074", "isPresent": true
+        },
+        {"rollNumber": "19K81A0075", "isPresent": true
+        },
+        {"rollNumber": "19K81A0076", "isPresent": true
+        },
+        {"rollNumber": "19K81A0077", "isPresent": true
+        },
+        {"rollNumber": "19K81A0078", "isPresent": true
+        },
+        {"rollNumber": "19K81A0079", "isPresent": true
+        },
+        {"rollNumber": "19K81A0080", "isPresent": true
+        },
+        {"rollNumber": "19K81A0081", "isPresent": true
+        },
+        {"rollNumber": "19K81A0082", "isPresent": true
+        },
+        {"rollNumber": "19K81A0083", "isPresent": true
+        },
+        {"rollNumber": "19K81A0084", "isPresent": true
+        },
+        {"rollNumber": "19K81A0085", "isPresent": true
+        },
+        {"rollNumber": "19K81A0086", "isPresent": true
+        },
+        {"rollNumber": "19K81A0087", "isPresent": true
+        },
+        {"rollNumber": "19K81A0088", "isPresent": true
+        },
+        {"rollNumber": "19K81A0089", "isPresent": true
+        },
+        {"rollNumber": "19K81A0090", "isPresent": true
+        },
+        {"rollNumber": "19K81A0091", "isPresent": true
+        },
+        {"rollNumber": "19K81A0092", "isPresent": true
+        },
+        {"rollNumber": "19K81A0093", "isPresent": true
+        },
+        {"rollNumber": "19K81A0094", "isPresent": true
+        },
+        {"rollNumber": "19K81A0095", "isPresent": true
+        },
+        {"rollNumber": "19K81A0096", "isPresent": true
+        },
+        {"rollNumber": "19K81A0097", "isPresent": true
+        },
+        {"rollNumber": "19K81A0098", "isPresent": true
+        },
+        {"rollNumber": "19K81A0099", "isPresent": true
+        },
+        {"rollNumber": "19K81A0100", "isPresent": true
+        },
+        {"rollNumber": "19K81A0101", "isPresent": true
+        },
+        {"rollNumber": "19K81A0102", "isPresent": true
+        },
+        {"rollNumber": "19K81A0103", "isPresent": true
+        },
+        {"rollNumber": "19K81A0104", "isPresent": true
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+<!--
+    Description:
+    Attendance Input
+
+    path:attendance/<int:classroom_id>/<int:period_id>/<int:subject_id>/
+    urls:http://localhost:8000/attendance/1/1/1/
+    view:attendance_input
+-->
+
+
+
+{% comment %}
+{% load static %}
+<!--
+    localhost:8000/attendance/1/1/1
+    http://localhost:8000/attendance/4/4/4/
+ -->
+<script defer="defer" src="{% static 'js/react_content.js'%}"></script>
+<link rel="stylesheet"
+href="{% static 'css/react_style.css'%}">
+
+
+
+<body>
+    <div id="root"></div>
+</body>
+{% endcomment %}
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <title>React App</title>
+    <script defer="defer" src="{% static 'js/react_content.js' %}"></script>
+    <link href="{% static 'css/react_style.css' %}" rel="stylesheet">
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+
+</html>

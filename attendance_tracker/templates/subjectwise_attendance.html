@@ -1,0 +1,50 @@
+<!--
+    Description:
+    Show Attendance history of the Student
+    based on chosen Subject
+
+    path: attendance/s/<int:student_id>/subject/<int:subject_id>/'
+    url: http://localhost:8000/attendance/s/1/subject/1/
+    view: subjectwise_attendance
+-->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="header">
+    {{subjectwise_attendance.0.student.roll_number}} 
+</div>
+
+<h1> {{subjectwise_attendance.0.subject.name}} </h1>
+
+
+{% for attendance_record in subjectwise_attendance %}
+{% endfor%}
+
+<div class="">
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">P/A Status</div>
+        <div class="col col-2">Date</div>
+        <div class="col col-3">Subjet Code</div>
+      </li>
+    {% for attendance_record in subjectwise_attendance %}
+    <li class="table-row {% if attendance_record.is_present %}present{% else%}absent{% endif%} ">
+      <div class="col col-1" data-label="period_name">{{attendance_record.is_present}}</div>
+      <div class="col col-2" data-label="subject_name">{{attendance_record.date}}</div>
+      <div class="col col-3" data-label="status">{{attendance_record.subject.code}}</div>
+    </li>
+    
+  {% endfor %}
+  </ul>
+  </div>
+{% endblock content %}
+
+
+{% comment %}
+{% for x in attendance_summary%}
+    {% if x.is_present %}
+        {{x.student.roll_number}}
+    {% endif %}
+{% endfor%}
+{% endcomment %}

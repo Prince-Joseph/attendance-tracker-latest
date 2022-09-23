@@ -1,0 +1,59 @@
+<!--
+    Description:
+    Teachers Dashboard
+
+    path:dashboard/t/
+    urls:http://localhost:dashboard/
+    view:teachers_dashboard;
+-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<html>
+    <head>
+        <script>
+            function validateForm() {
+                //alert('Validating form...');
+                var text = document.getElementById('txtValue').value;
+                var period = document.getElementById('periodValue').value;
+                var subject = document.getElementById('subjectValue').value;
+
+                text = escape(text);
+                location.href = 'http://localhost:8000/'+ "attendance" +'/'+ text+'/'+period +'/'+ subject;
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="timetable box-holder">
+
+            <div class="box"> {{ timetable.period_1.subject.name }} </div>
+          
+            <div class="box absent"> {{ timetable.period_2.subject.name }} </div>
+          
+            <div class="box present"> {{ timetable.period_3.subject.name }}  </div>
+          
+            <div class="box present">  {{ timetable.period_4.subject.name }}  </div>
+          
+            <div class="box">  {{ timetable.period_5.subject.name }} </div>
+          
+            <div class="box"> {{ timetable.period_6.subject.name }}  </div>
+          
+            <div class="box"> {{ timetable.period_7.subject.name }}  </div>
+          
+        </div>
+        <h1>{{request.user.username}}</h1>
+        <form id="frmTest" method="get" action="" onsubmit="return validateForm();">
+            <input id="txtValue" type="text" value="ME3A">
+            <input id="subjectValue" type="text" value="French"><br>
+            <input id="periodValue" type="number" value="3">
+             <!-- Several CAts will be killed SEVERELY if you don respond in meet by severing heads -->
+            <input id="btnSubmit" type="submit" value="Attendance time">
+            <!-- <button onclick="location.href='teachers_timetable.html'"> Teachers Timetable</button> -->
+        </form>
+    </body>
+</html>
+{% endblock content %}

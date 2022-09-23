@@ -1,0 +1,90 @@
+<!--
+    Description:
+    Shows the Timetable of Classroom
+
+    path: timetable/c/<int:classroom_id>/
+    url: http://localhost:8000/timetable/c/1/
+    views: classroom_timetable
+    -->
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div>
+    <div class="header">
+        {{request.user.username}}
+    </div>
+
+{% for daytimetable in classroom_timetable %}
+
+<button class="day">{{daytimetable.week_day}}</button>
+<div class="panel">
+        <ul class="responsive-table">
+            <li class="table-header">
+              <div class="col col-1">Period</div>
+              <div class="col col-2">Subject</div>
+              <div class="col col-3">Teacher Name</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">{{ daytimetable.id }}</div>
+                <div class="col col-2" data-label="period_name">{{daytimetable.period_1.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{daytimetable.period_1.teacher}}</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">{{ daytimetable.id }}</div>
+                <div class="col col-2" data-label="period_name">{{daytimetable.period_1.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{daytimetable.period_1.teacher}}</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">{{ daytimetable.id }}</div>
+                <div class="col col-2" data-label="period_name">{{daytimetable.period_1.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{daytimetable.period_1.teacher}}</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">{{ daytimetable.id }}</div>
+                <div class="col col-2" data-label="period_name">{{daytimetable.period_4.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{daytimetable.period_4.teacher}}</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">{{ daytimetable.id }}</div>
+                <div class="col col-2" data-label="period_name">{{daytimetable.period_5.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{daytimetable.period_5.teacher}}</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">{{ daytimetable.id }}</div>
+                <div class="col col-2" data-label="period_name">{{daytimetable.period_6.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{daytimetable.period_6.teacher}}</div>
+            </li>
+
+        </ul>   
+</div>
+
+{% endfor%}
+
+
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("day");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,184 @@
+/* For everyone to use */
+
+:root {
+    --primary: #A1B6FF;
+    --textonPrimary: #0B0A0A;
+  }
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+}
+
+.container{
+    /* max-width: 100%; */
+    max-width: 600px;
+    margin:auto;
+}
+
+.header{
+    font-size: 3rem;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: #FDF6D4;
+    color: var(--textonPrimary);
+    font: 1rem;
+    padding: 1rem;
+    margin: .3rem;
+     
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.col{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: max-content;
+    max-width: 50%;
+}
+/* 
+Unique Clasess for 
+student_dashboard.html
+*/
+.box-holder{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.box{
+    margin:2px;
+    height: 50px;
+    width: 100px;
+    background-color: #E8F1FF;
+    border-radius: 2px;
+    color: var(--textonPrimary);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.present{
+    background-color: #C0F3B8 ;
+    color: black;
+}
+
+.absent{
+    background-color: #ED7D7D !important;
+    color: white;
+}
+
+.subjectbar{
+    height: max-content;  
+    position: relative;
+    width: 300px;
+    border: #0B0A0A solid 2px;
+    border-radius: 25px;
+    /* padding: 10px; */
+    box-shadow: inset 0 -1px 1px white;
+}
+.subjectbar > span{
+    display: block;
+    height: 2rem;
+    padding-top: 10px;
+    padding-left: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #C0F3B8;
+    position: relative;
+    font-weight: bold;
+}
+.low{
+    background-color: #ED7D7D !important;
+}
+.count{
+    font-size: 20px;
+}
+.at_stats{
+    padding-top: 4rem;
+    width: max-content;
+    margin: auto;
+    height: 10rem;
+}
+.absent-count{
+    color: #FF0707;
+}
+.present-count{
+    color: #C0F3B8;
+}
+
+/* Classroom Timetab */
+.day {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .day:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+  .responsive-table{
+    padding-left: 0px;
+  }
+  .responsive-table >  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .responsive-table >  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .responsive-table >  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .responsive-table > .col-1 {
+    flex-basis: 10%;
+  }
+.responsive-table >  .col-2 {
+    flex-basis: 40%;
+  }
+.responsive-table >  .col-3 {
+    flex-basis: 25%;
+  }
+.responsive-table >  .col-4 {
+    flex-basis: 25%;
+  }
+
+.present-background{
+  background-color: #C0F3B8;
+}
+.absent-background{
+  background-color: #ED7D7D !important;
+}

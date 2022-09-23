@@ -1,0 +1,25 @@
+<!-- 
+  Description:
+  Shows Attendance of student for a Specific Date 
+
+  path:attendance/s/<int:student_id>/d/<int:year>/<int:month>/<int:date>/
+  url:http://localhost:8000/attendance/s/1/d/1/1/1/
+  views:specific_day_attendance -->
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% for attendance_record in specific_date_attendance %}
+    {{attendance_record.student.roll_number}} |
+    {{attendance_record.period}} |
+    {{attendance_record.subject.name}} |
+    {{attendance_record.is_present}}
+    <br>
+  {% endfor %}
+
+
+
+{% endblock content %}
