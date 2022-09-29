@@ -5,6 +5,8 @@ Create your virtual environment
 and activate it.
 
 ```bash
+python3 -m venv atenv
+at-env
 pip install requirements
 ```
 
@@ -12,6 +14,5 @@ pip install requirements
 # Optional
 cd attendance_tracker/react_src
 npm install
-npm start 
+npm start
 ```
-

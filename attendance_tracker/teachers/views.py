@@ -19,7 +19,7 @@ def teachers_dashboard(request):
 def daywise_timetable_t(request,weekday):
     """
     displays teachers day wise timetable 
-    """
+    """ 
     
     context={}
     weekday=Timetable.objects.get(week_day=weekday)

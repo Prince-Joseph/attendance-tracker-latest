@@ -1,4 +1,5 @@
 from django.db import models
+from traitlets import Integer
 from students.models import Classroom
 from teachers.models import Teacher, Subject
 from django.utils.translation import gettext_lazy as _
@@ -30,6 +31,9 @@ class Timetable(models.Model):
         Classroom, null=True, blank=True, on_delete=models.PROTECT)
     week_day = models.CharField(
         max_length=10, default=WeekDay.MONDAY, choices=WeekDay.choices)
+
+    # period_no = Integer
+    # Lecture = fk.lectuttrmodel
     period_1 = models.ForeignKey(
         Lecture, on_delete=models.PROTECT, related_name="period1_lecture")
     period_2 = models.ForeignKey(
@@ -44,6 +48,8 @@ class Timetable(models.Model):
         Lecture, on_delete=models.PROTECT, related_name="period6_lecture")
     period_7 = models.ForeignKey(
         Lecture, on_delete=models.PROTECT, related_name="period7_lecture")
+
+    
 
     def __str__(self):
         return str(self.classroom) + self.week_day

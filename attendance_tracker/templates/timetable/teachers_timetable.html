@@ -12,29 +12,103 @@
 
 {% block content %}
 
-
-{% for x in tables %}
-
-
-{% if x.classroom == "period" %}
-<br><br>
-{% else%}
-
-{{x.classroom}} for {{x.week_day}} <br>
-{% endif %}
-
-{% endfor %}
-
 <h1>
     mondays timetable
 </h1>
 
 {% for timetable in monday %}
-    <p>{{ timetable.classroom }} |
-        {{ timetable.period_1.subject.name }}
+    <p>{{ timetable.classroom }}|
+        {{ timetable.period_1.subject.name }}|
+        {{ timetable.period_1.teacher }} ----
+        {{ timetable.period_2.subject.name }}|
+        {{ timetable.period_2.teacher }} ----
+        {{ timetable.period_3.subject.name }}|
+        {{ timetable.period_3.teacher }} ----
+        {{ timetable.period_4.subject.name }}|
+        {{ timetable.period_4.teacher }} ----
+        {{ timetable.period_5.subject.name }}|
+        {{ timetable.period_5.teacher }} ----
+        {{ timetable.period_6.subject.name }}|
+        {{ timetable.period_6.teacher }} ----
+        {{ timetable.period_6.subject.name }}|
+        {{ timetable.period_6.teacher }} ----
+        {{ timetable.period_7.subject.name }}|
+        {{ timetable.period_7.teacher }} ----
     </p>
+    <br><br><br>
 {% endfor %}
 
+<button class="day">Monday</button>
+<div class="panel">
+        <ul class="responsive-table">
+            <li class="table-header">
+              <div class="col col-1">Period</div>
+              <div class="col col-2">Subject</div>
+              <div class="col col-3">Classroom</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">1</div>
+                <div class="col col-2" data-label="period_name">{{monday.0.period_1.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{monday.0.classroom}} {{monday.0.period_1.teacher}}</div>
+            </li>
+
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">2</div>
+                <div class="col col-2" data-label="period_name">{{monday.1.period_2.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{monday.1.classroom}} {{monday.1.period_2.teacher}}</div>
+            </li>
+
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">3</div>
+                <div class="col col-2" data-label="period_name">{{monday.2.period_3.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{monday.2.classroom}}{{monday.1.period_3.teacher}}</div>
+            </li>
+
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">4</div>
+                <div class="col col-2" data-label="period_name">{{monday.3.period_4.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{monday.3.classroom}}</div>
+            </li>
+
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">5</div>
+                <div class="col col-2" data-label="period_name">{{monday.4.period_5.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{monday.4.classroom}}</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">6</div>
+                <div class="col col-2" data-label="period_name">{{monday.5.period_6.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{monday.5.classroom}}</div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="period_no">7</div>
+                <div class="col col-2" data-label="period_name">{{monday.6.period_7.subject.name}}</div>
+                <div class="col col-3" data-label="period_teacher">{{monday.6.classroom}}</div>
+            </li>
+                 
+
+        </ul>   
+</div>
+
+
+
+
+<script>
+    var acc = document.getElementsByClassName("day");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+</script>
 
 
 {% endblock content %}

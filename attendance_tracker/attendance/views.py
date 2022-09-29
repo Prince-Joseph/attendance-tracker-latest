@@ -93,7 +93,7 @@ class SaveAttendance(views.APIView):
 
         # If common headers match with previous record just update the
         # rows
-        for i in range(0, student_data.length):
+        for i in range(0,len(student_data)):
 
             attendance_record = Attendance()
 
