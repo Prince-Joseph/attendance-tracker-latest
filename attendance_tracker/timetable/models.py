@@ -32,27 +32,27 @@ class Timetable(models.Model):
     week_day = models.CharField(
         max_length=10, default=WeekDay.MONDAY, choices=WeekDay.choices)
 
-    # period_no = Integer
-    # Lecture = fk.lectuttrmodel
-    period_1 = models.ForeignKey(
-        Lecture, on_delete=models.PROTECT, related_name="period1_lecture")
-    period_2 = models.ForeignKey(
-        Lecture, on_delete=models.PROTECT, related_name="period2_lecture")
-    period_3 = models.ForeignKey(
-        Lecture, on_delete=models.PROTECT, related_name="period3_lecture")
-    period_4 = models.ForeignKey(
-        Lecture, on_delete=models.PROTECT, related_name="period4_lecture")
-    period_5 = models.ForeignKey(
-        Lecture, on_delete=models.PROTECT, related_name="period5_lecture")
-    period_6 = models.ForeignKey(
-        Lecture, on_delete=models.PROTECT, related_name="period6_lecture")
-    period_7 = models.ForeignKey(
-        Lecture, on_delete=models.PROTECT, related_name="period7_lecture")
+    period_no = models.IntegerField(null=True)
+    lecture = models.ForeignKey( Lecture, on_delete = models.PROTECT, related_name='assigned_periods',null=True)
+    # period_1 = models.ForeignKey(
+    #     Lecture, on_delete=models.PROTECT, related_name="period1_lecture")
+    # period_2 = models.ForeignKey(
+    #     Lecture, on_delete=models.PROTECT, related_name="period2_lecture")
+    # period_3 = models.ForeignKey(
+    #     Lecture, on_delete=models.PROTECT, related_name="period3_lecture")
+    # period_4 = models.ForeignKey(
+    #     Lecture, on_delete=models.PROTECT, related_name="period4_lecture")
+    # period_5 = models.ForeignKey(
+    #     Lecture, on_delete=models.PROTECT, related_name="period5_lecture")
+    # period_6 = models.ForeignKey(
+    #     Lecture, on_delete=models.PROTECT, related_name="period6_lecture")
+    # period_7 = models.ForeignKey(
+    #     Lecture, on_delete=models.PROTECT, related_name="period7_lecture")
 
     
 
     def __str__(self):
-        return str(self.classroom) + self.week_day
+        return str(self.period_no)+" "+ str(self.classroom) +" "+ self.week_day
 
     def get_unique_subject(self,classroom_id):
         all_relevant_timetables = Timetable.objects.filter(classroom=classroom_id)
@@ -64,12 +64,12 @@ class Timetable(models.Model):
         Students time table today
         """
 
-        classroom_id = Classroom.objects.get(id=classroom_id)
+        classroom = Classroom.objects.get(id=classroom_id)
         today = datetime.date.today()  # date
         # today = datetime.datetime.now() #datetime
         # someday = datetime.date(2002,6,2)
         current_weekday = datetime.date.weekday(today)
-        print(current_weekday)
+        print(classroom_id)
         # week in 0-6 --> 'Monday'
         day_ref = {
             0: 'Monday',
@@ -80,7 +80,7 @@ class Timetable(models.Model):
             5: 'Saturday',
         }
         day = day_ref[current_weekday]
-        print(Timetable.objects.filter(classroom=classroom_id,week_day=day))
-        return Timetable.objects.get(classroom=classroom_id,week_day=day)
+        print(Timetable.objects.filter(classroom=classroom,week_day=day))
+        return Timetable.objects.filter(classroom=classroom,week_day=day)
 
 

@@ -81,7 +81,7 @@ def teachers_timetable(request,teacher_id):
             saturdays.append(x)
 
 
-    print("monday",mondays)
+    # print("monday",dir(mondays[1]))
 
     context['monday'] = mondays
     context['tuesday'] = tuesdays
@@ -94,6 +94,47 @@ def teachers_timetable(request,teacher_id):
 
     return render(request, "timetable/teachers_timetable.html", context)
     # https://stackoverflow.com/questions/19745091/accessing-dictionary-by-key-in-django-template
+
+
+
+
+
+
+
+def teachers_timetable(request,teacher_id):
+    """
+        Updated Teachers
+    """
+    context={}
+
+    teacher = Teacher.objects.get(id=teacher_id)
+    relevant_lectures_pk_queryset = Lecture.objects.filter(teacher=teacher_id)
+
+    lectures_pk_list = []
+    for query_item in relevant_lectures_pk_queryset:
+        # [(1,),(4,),] --> [ 1, 4 ]
+        lectures_pk_list.append(query_item)
+
+    timetable = Timetable.objects.filter(lecture__in=lectures_pk_list)
+   
+    # print(timetable)
+    # <QuerySet [<Timetable: 1 ME4A Monday>, <Timetable: 6 ME4A Monday>, 
+    # <Timetable: 4 ME4A Tuesday>, <Timetable: 3 ME4B Tuesday>, <Timetable: 5 ME4B Tuesday>, 
+    # <Timetable: 6 ME4B Wednesday>, <Timetable: 1 ME4B Friday>, <Timetable: 7 ME4B Saturday>]>
+
+    context["teachers_timetable"] = timetable
+    return render(request, "timetable/teachers_timetable.html", context)
+
+
+
+
+
+
+
+
+
+
+
 
 """
 1. attendance models --> new creates

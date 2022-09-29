@@ -19,7 +19,7 @@ def student_dashboard(request,student_id):
     date = datetime.date.today()
     context['student'] = student
     context['todays_attendance']= Attendance.get_specific_date_attendance(Attendance,student,date)
-    context['timetable']= Timetable.get_daywise_timetable(Timetable,1)
+    context['timetable']= Timetable.get_daywise_timetable(Timetable,student.classroom.id)
     
     # # experiment
     # weekday=Timetable.objects.get(week_day=weekday)
@@ -59,6 +59,7 @@ def semesterwise_attendance(request,student_id):
     context['semesterwise_attendance']=Attendance.get_semesterwise_attendance(Attendance,student)
     return render(request,"semwise_attendance.html",context)
 
+# Not needed
 def daywise_timetable(request,weekday):
     """
     displays that days' timetable

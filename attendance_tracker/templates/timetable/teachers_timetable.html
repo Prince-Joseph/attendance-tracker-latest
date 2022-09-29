@@ -16,79 +16,45 @@
     mondays timetable
 </h1>
 
-{% for timetable in monday %}
-    <p>{{ timetable.classroom }}|
-        {{ timetable.period_1.subject.name }}|
-        {{ timetable.period_1.teacher }} ----
-        {{ timetable.period_2.subject.name }}|
-        {{ timetable.period_2.teacher }} ----
-        {{ timetable.period_3.subject.name }}|
-        {{ timetable.period_3.teacher }} ----
-        {{ timetable.period_4.subject.name }}|
-        {{ timetable.period_4.teacher }} ----
-        {{ timetable.period_5.subject.name }}|
-        {{ timetable.period_5.teacher }} ----
-        {{ timetable.period_6.subject.name }}|
-        {{ timetable.period_6.teacher }} ----
-        {{ timetable.period_6.subject.name }}|
-        {{ timetable.period_6.teacher }} ----
-        {{ timetable.period_7.subject.name }}|
-        {{ timetable.period_7.teacher }} ----
-    </p>
-    <br><br><br>
-{% endfor %}
 
-<button class="day">Monday</button>
+<div>
+    <div class="header">
+        {{request.user.username}}
+        &nbsp;
+    </div>
+
+
+
+
+
+{% for period in teachers_timetable %}
+{% ifchanged period.week_day %}
+<!-- week day -->
+<button class="day"> {{period.week_day}}</button> {# monday, tuesday.... #}
+
 <div class="panel">
         <ul class="responsive-table">
             <li class="table-header">
               <div class="col col-1">Period</div>
               <div class="col col-2">Subject</div>
-              <div class="col col-3">Classroom</div>
-            </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="period_no">1</div>
-                <div class="col col-2" data-label="period_name">{{monday.0.period_1.subject.name}}</div>
-                <div class="col col-3" data-label="period_teacher">{{monday.0.classroom}} {{monday.0.period_1.teacher}}</div>
+              <div class="col col-3">classroom</div>
             </li>
 
-            <li class="table-row">
-                <div class="col col-1" data-label="period_no">2</div>
-                <div class="col col-2" data-label="period_name">{{monday.1.period_2.subject.name}}</div>
-                <div class="col col-3" data-label="period_teacher">{{monday.1.classroom}} {{monday.1.period_2.teacher}}</div>
-            </li>
-
-            <li class="table-row">
-                <div class="col col-1" data-label="period_no">3</div>
-                <div class="col col-2" data-label="period_name">{{monday.2.period_3.subject.name}}</div>
-                <div class="col col-3" data-label="period_teacher">{{monday.2.classroom}}{{monday.1.period_3.teacher}}</div>
-            </li>
-
-            <li class="table-row">
-                <div class="col col-1" data-label="period_no">4</div>
-                <div class="col col-2" data-label="period_name">{{monday.3.period_4.subject.name}}</div>
-                <div class="col col-3" data-label="period_teacher">{{monday.3.classroom}}</div>
-            </li>
-
-            <li class="table-row">
-                <div class="col col-1" data-label="period_no">5</div>
-                <div class="col col-2" data-label="period_name">{{monday.4.period_5.subject.name}}</div>
-                <div class="col col-3" data-label="period_teacher">{{monday.4.classroom}}</div>
-            </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="period_no">6</div>
-                <div class="col col-2" data-label="period_name">{{monday.5.period_6.subject.name}}</div>
-                <div class="col col-3" data-label="period_teacher">{{monday.5.classroom}}</div>
-            </li>
-            <li class="table-row">
-                <div class="col col-1" data-label="period_no">7</div>
-                <div class="col col-2" data-label="period_name">{{monday.6.period_7.subject.name}}</div>
-                <div class="col col-3" data-label="period_teacher">{{monday.6.classroom}}</div>
-            </li>
-                 
-
-        </ul>   
+            <!-- Loop through timetable -->
+            {% for timetable in teachers_timetable %}
+            {% if timetable.week_day == period.week_day %}
+              <li class="table-row">
+                <div class="col col-1"> {{timetable.period_no}} </div>
+                <div class="col col-2"> {{timetable.lecture.subject.name}}</div>
+                <div class="col col-3"> {{timetable.classroom}}</div>
+              </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
 </div>
+{% endifchanged %}
+{% endfor%}
+
 
 
 

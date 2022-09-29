@@ -31,7 +31,12 @@
 {% endcomment %}
 <div class="timetable box-holder">
 
-  <div class="box"> {{ timetable.period_1.subject.name }} </div>
+{% for period in timetable %}
+  <div class="box absent"> {{ period.classroom }} {{ period.lecture.subject.name }} </div>
+
+{% endfor %}
+  
+  <!-- <div class="box"> {{ timetable.period_1.subject.name }} </div>
 
   <div class="box absent"> {{ timetable.period_2.subject.name }} </div>
 
@@ -43,7 +48,7 @@
 
   <div class="box"> {{ timetable.period_6.subject.name }}  </div>
 
-  <div class="box"> {{ timetable.period_7.subject.name }}  </div>
+  <div class="box"> {{ timetable.period_7.subject.name }}  </div> -->
 
 </div>
 
