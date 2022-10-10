@@ -13,7 +13,7 @@
 
 
 {% block content %}
-<h1>Only present guys</h1>
+<h1>Only present students</h1>
 {% for x in attendance_summary%}
     {% if x.is_present %}
         {{x.student.roll_number}}
@@ -21,7 +21,7 @@
 {% endfor%}
 <br><br>
 <hr>
-<h1>Only Absent guys</h1>
+<h1>Only absent students</h1>
 {% for x in attendance_summary%}
     {% if not x.is_present %}
         {{x.student.roll_number}}
