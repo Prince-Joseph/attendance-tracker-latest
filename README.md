@@ -10,7 +10,7 @@ Create your virtual environment
 and activate it.
 
 ```bash
-python3 -m venv atenv
+python3 -m venv env
 at-env
 pip install requirements
 ```
